@@ -1,0 +1,343 @@
+{
+  "categories": [
+    "UGC NET",
+    "University Exams",
+    "Entrance Exams",
+    "Food Safety Officer",
+    "Competitive Exams"
+  ],
+  "mockTests": [
+    {
+      "id": "exam-1",
+      "title": "UGC NET Mock Test 4 - Nutrition Science & Dietetics",
+      "category": "UGC NET",
+      "durationMinutes": 60,
+      "totalQuestions": 10,
+      "passingScore": 60,
+      "status": "Available",
+      "difficulty": "Advanced",
+      "description": "Comprehensive simulation covering human nutrition, biochemistry, diet therapy, and food science standards.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "Which of the following amino acids is an essential precursor for the synthesis of Niacin (Vitamin B3)?",
+          "options": [
+            "Tyrosine",
+            "Tryptophan",
+            "Phenylalanine",
+            "Lysine"
+          ],
+          "correctIndex": 1,
+          "explanation": "Tryptophan is an essential amino acid that serves as a precursor for the endogenous synthesis of niacin (approx 60 mg tryptophan yields 1 mg niacin).",
+          "topic": "Micronutrients"
+        },
+        {
+          "id": "q2",
+          "question": "Which enzyme is responsible for the rate-limiting step in endogenous cholesterol synthesis?",
+          "options": [
+            "HMG-CoA Reductase",
+            "Lipoprotein Lipase",
+            "Fatty Acid Synthase",
+            "Carnitine Palmitoyltransferase I"
+          ],
+          "correctIndex": 0,
+          "explanation": "HMG-CoA Reductase converts HMG-CoA to mevalonate, which is the primary rate-limiting step in cholesterol biosynthesis.",
+          "topic": "Biochemistry"
+        },
+        {
+          "id": "q3",
+          "question": "In chronic kidney disease (CKD Stage 3-4), what is the typically recommended dietary protein intake for non-dialysis patients?",
+          "options": [
+            "1.2 - 1.5 g/kg/day",
+            "0.55 - 0.60 g/kg/day (or 0.6 - 0.8 g/kg)",
+            "2.0 g/kg/day",
+            "No protein restriction needed"
+          ],
+          "correctIndex": 1,
+          "explanation": "KDOQI Clinical Practice Guidelines recommend protein restriction of 0.55-0.60 g/kg/day or 0.6-0.8 g/kg/day to slow progression of renal failure in non-dialysis CKD.",
+          "topic": "Clinical Dietetics"
+        },
+        {
+          "id": "q4",
+          "question": "The Maillard reaction in food processing involves a chemical reaction between:",
+          "options": [
+            "Fats and Mineral ions",
+            "Amino acids and Reducing sugars",
+            "Carbohydrates and Water",
+            "Vitamins and Phospholipids"
+          ],
+          "correctIndex": 1,
+          "explanation": "The Maillard reaction is a non-enzymatic browning reaction between amino acids and reducing sugars under heat.",
+          "topic": "Food Chemistry"
+        },
+        {
+          "id": "q5",
+          "question": "Which vitamin deficiency is specifically associated with Wernicke-Korsakoff syndrome?",
+          "options": [
+            "Riboflavin (B2)",
+            "Thiamine (B1)",
+            "Cobalamin (B12)",
+            "Pyridoxine (B6)"
+          ],
+          "correctIndex": 1,
+          "explanation": "Thiamine (Vitamin B1) deficiency, frequently seen in chronic alcoholism or severe malnutrition, causes Wernicke-Korsakoff syndrome.",
+          "topic": "Micronutrients"
+        },
+        {
+          "id": "q6",
+          "question": "What is the primary indicator of long-term glycemic control over a 2-3 month period?",
+          "options": [
+            "Fasting Blood Glucose",
+            "Oral Glucose Tolerance Test (OGTT)",
+            "Glycated Hemoglobin (HbA1c)",
+            "Postprandial Glucose"
+          ],
+          "correctIndex": 2,
+          "explanation": "HbA1c reflects average blood glucose levels over the preceding 8-12 weeks based on red blood cell turnover.",
+          "topic": "Clinical Assessment"
+        },
+        {
+          "id": "q7",
+          "question": "Which mineral is a key structural constituent of the antioxidant enzyme Glutathione Peroxidase?",
+          "options": [
+            "Zinc",
+            "Selenium",
+            "Copper",
+            "Manganese"
+          ],
+          "correctIndex": 1,
+          "explanation": "Selenium is incorporated as selenocysteine into the active site of glutathione peroxidase.",
+          "topic": "Micronutrients"
+        },
+        {
+          "id": "q8",
+          "question": "Which of the following describes the respiratory quotient (RQ) for pure carbohydrate oxidation?",
+          "options": [
+            "0.70",
+            "0.82",
+            "1.00",
+            "0.95"
+          ],
+          "correctIndex": 2,
+          "explanation": "The RQ for carbohydrate oxidation is 1.00 (VCO2 / VO2 = 6 / 6 = 1.0), whereas fat oxidation has an RQ of approximately 0.70.",
+          "topic": "Biochemistry"
+        },
+        {
+          "id": "q9",
+          "question": "What is the critical temperature range known as the 'Food Temperature Danger Zone' in food safety?",
+          "options": [
+            "0°C to 10°C",
+            "5°C to 60°C (41°F to 140°F)",
+            "70°C to 100°C",
+            "-18°C to 0°C"
+          ],
+          "correctIndex": 1,
+          "explanation": "The danger zone between 5°C and 60°C (41°F - 140°F) facilitates rapid bacterial multiplication.",
+          "topic": "Food Safety"
+        },
+        {
+          "id": "q10",
+          "question": "Which bioactive compound in green tea is primarily responsible for its potent antioxidant capacity?",
+          "options": [
+            "Epigallocatechin gallate (EGCG)",
+            "Resveratrol",
+            "Curcumin",
+            "Lycopene"
+          ],
+          "correctIndex": 0,
+          "explanation": "EGCG is the most abundant and potent catechin polyphenol found in green tea.",
+          "topic": "Food Chemistry"
+        }
+      ]
+    },
+    {
+      "id": "exam-2",
+      "title": "Quick Revision Quiz: Micronutrients & Food Chemistry",
+      "category": "Competitive Exams",
+      "durationMinutes": 15,
+      "totalQuestions": 5,
+      "passingScore": 70,
+      "status": "Available",
+      "difficulty": "Intermediate",
+      "description": "Quick fire rounds to test retention on essential minerals, fat-soluble vitamins, and nutritional biochemistry.",
+      "questions": [
+        {
+          "id": "q201",
+          "question": "Which vitamin enhances the intestinal absorption of non-heme iron?",
+          "options": [
+            "Vitamin C (Ascorbic acid)",
+            "Vitamin D (Calcitriol)",
+            "Vitamin E (Tocopherol)",
+            "Vitamin K (Phylloquinone)"
+          ],
+          "correctIndex": 0,
+          "explanation": "Ascorbic acid reduces ferric iron (Fe3+) to ferrous iron (Fe2+), significantly improving bioavailability.",
+          "topic": "Micronutrients"
+        },
+        {
+          "id": "q202",
+          "question": "Rickets in children and osteomalacia in adults are classically caused by deficiency of:",
+          "options": [
+            "Vitamin A",
+            "Vitamin C",
+            "Vitamin D",
+            "Vitamin K"
+          ],
+          "correctIndex": 2,
+          "explanation": "Vitamin D deficiency causes impaired mineralization of bone matrix, leading to rickets or osteomalacia.",
+          "topic": "Micronutrients"
+        },
+        {
+          "id": "q203",
+          "question": "The conversion of beta-carotene into Vitamin A predominantly takes place in the:",
+          "options": [
+            "Intestinal mucosal cells",
+            "Gallbladder",
+            "Spleen",
+            "Kidneys"
+          ],
+          "correctIndex": 0,
+          "explanation": "Intestinal enterocytes express beta-carotene 15,15'-dioxygenase, converting beta-carotene into retinal.",
+          "topic": "Biochemistry"
+        },
+        {
+          "id": "q204",
+          "question": "Which of the following fatty acids is an essential omega-3 fatty acid?",
+          "options": [
+            "Linoleic Acid (LA)",
+            "Alpha-Linolenic Acid (ALA)",
+            "Oleic Acid",
+            "Palmitic Acid"
+          ],
+          "correctIndex": 1,
+          "explanation": "ALA (18:3 n-3) is the parent essential omega-3 fatty acid required in human nutrition.",
+          "topic": "Food Chemistry"
+        },
+        {
+          "id": "q205",
+          "question": "Which enzyme converts starch into maltose during salivary and pancreatic digestion?",
+          "options": [
+            "Pepsin",
+            "Amylase",
+            "Lipase",
+            "Trypsin"
+          ],
+          "correctIndex": 1,
+          "explanation": "Alpha-amylase hydrolyzes internal alpha-1,4-glycosidic bonds in starch into maltose and dextrins.",
+          "topic": "Food Chemistry"
+        }
+      ]
+    }
+  ],
+  "recentSubmissions": [
+    {
+      "id": "sub-1790066790517",
+      "examId": "exam-2",
+      "examName": "Quick Revision Quiz: Micronutrients & Food Chemistry",
+      "score": 60,
+      "correctCount": 3,
+      "totalQuestions": 5,
+      "date": "2026-09-22",
+      "status": "Review"
+    },
+    {
+      "id": "sub-1790066548085",
+      "examId": "exam-2",
+      "examName": "Quick Revision Quiz: Micronutrients & Food Chemistry",
+      "score": 100,
+      "correctCount": 5,
+      "totalQuestions": 5,
+      "date": "2026-09-22",
+      "status": "Passed"
+    },
+    {
+      "id": "sub-1",
+      "examId": "exam-metabolism",
+      "examName": "Metabolism Basics Quiz",
+      "score": 92,
+      "date": "2024-03-10",
+      "status": "Passed"
+    },
+    {
+      "id": "sub-2",
+      "examId": "exam-vitamins",
+      "examName": "Vitamins & Minerals Midterm",
+      "score": 78,
+      "date": "2024-03-02",
+      "status": "Review"
+    }
+  ],
+  "weakTopics": [
+    {
+      "topic": "Micronutrients",
+      "scorePercentage": 42,
+      "color": "error",
+      "recommendation": "Focus on fat-soluble vitamin toxicity and trace element bio-availability."
+    },
+    {
+      "topic": "Food Chemistry",
+      "scorePercentage": 58,
+      "color": "tertiary",
+      "recommendation": "Review enzymatic browning, lipid rancidity, and emulsion stabilizers."
+    },
+    {
+      "topic": "Clinical Dietetics",
+      "scorePercentage": 74,
+      "color": "primary",
+      "recommendation": "Good foundation; practice more renal and diabetic meal plan case calculations."
+    }
+  ],
+  "studyPlanner": [
+    {
+      "day": "Mon",
+      "date": 12,
+      "active": false,
+      "hasBadge": false,
+      "events": []
+    },
+    {
+      "day": "Tue",
+      "date": 13,
+      "active": true,
+      "hasBadge": false,
+      "events": [
+        {
+          "time": "10:00 AM - 12:00 PM",
+          "title": "UGC NET Mock Test 4",
+          "type": "primary"
+        },
+        {
+          "time": "2:00 PM - 4:00 PM",
+          "title": "Review: Food Safety Standards",
+          "type": "secondary"
+        }
+      ]
+    },
+    {
+      "day": "Wed",
+      "date": 14,
+      "active": false,
+      "hasBadge": true,
+      "events": [
+        {
+          "time": "11:00 AM - 1:00 PM",
+          "title": "Case Study 042: T2DM & CKD",
+          "type": "tertiary"
+        }
+      ]
+    },
+    {
+      "day": "Thu",
+      "date": 15,
+      "active": false,
+      "hasBadge": false,
+      "events": [
+        {
+          "time": "3:00 PM - 4:30 PM",
+          "title": "Clinical Dietetics Revision",
+          "type": "primary"
+        }
+      ]
+    }
+  ]
+}

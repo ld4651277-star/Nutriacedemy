@@ -1,0 +1,60 @@
+[
+  {
+    "id": "plan-seed-1",
+    "title": "Moderate Active Maintenance Plan",
+    "createdAt": "2024-03-01T10:00:00Z",
+    "profile": {
+      "age": 25,
+      "sex": "Female",
+      "heightCm": 168,
+      "weightKg": 62,
+      "activityLevel": "Moderate"
+    },
+    "metrics": {
+      "bmi": 22.0,
+      "bmr": 1395,
+      "tdee": 2162,
+      "targetCalories": 2160,
+      "proteinGrams": 135,
+      "carbGrams": 243,
+      "fatGrams": 60
+    },
+    "meals": [
+      {
+        "name": "Breakfast",
+        "time": "8:00 AM",
+        "calories": 480,
+        "items": ["Rolled oats with almond milk and chia seeds", "1 scoop whey or plant protein", "Half cup fresh blueberries and sliced banana"],
+        "macros": "32g P / 65g C / 10g F"
+      },
+      {
+        "name": "Mid-Morning Snack",
+        "time": "11:00 AM",
+        "calories": 220,
+        "items": ["Greek yogurt (0% fat)", "A handful of raw walnuts (15g)"],
+        "macros": "18g P / 10g C / 12g F"
+      },
+      {
+        "name": "Lunch",
+        "time": "1:30 PM",
+        "calories": 650,
+        "items": ["Grilled chicken breast / paneer / tofu (150g)", "1 cup brown rice or quinoa", "Steamed broccoli, carrots, and spinach with olive oil (1 tsp)"],
+        "macros": "45g P / 75g C / 18g F"
+      },
+      {
+        "name": "Evening Snack",
+        "time": "5:00 PM",
+        "calories": 210,
+        "items": ["Apple slices with 1 tbsp natural peanut butter"],
+        "macros": "5g P / 28g C / 9g F"
+      },
+      {
+        "name": "Dinner",
+        "time": "8:00 PM",
+        "calories": 600,
+        "items": ["Baked salmon / seasoned lentils (140g)", "Roasted sweet potatoes (150g)", "Mixed green salad with lemon vinaigrette"],
+        "macros": "35g P / 65g C / 21g F"
+      }
+    ]
+  }
+]

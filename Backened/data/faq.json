@@ -1,0 +1,22 @@
+[
+  {
+    "id": "faq-1",
+    "question": "What is the format of the courses?",
+    "answer": "Our courses are primarily online, featuring a mix of video lectures, interactive quizzes, downloadable notes, and practical clinical assignments. We also offer optional live Q&A sessions with certified dietitians."
+  },
+  {
+    "id": "faq-2",
+    "question": "Do I need prior experience?",
+    "answer": "No prior experience is necessary for our foundational courses. Advanced modules such as Clinical Dietetics and Food Safety may require completion of prerequisites or equivalent study."
+  },
+  {
+    "id": "faq-3",
+    "question": "How long does certification take?",
+    "answer": "Most students complete their certification within 3 to 6 months, depending on their pace and the specific program track chosen."
+  },
+  {
+    "id": "faq-4",
+    "question": "Are mock test results and weak topics tracked?",
+    "answer": "Yes! Every mock test and quick revision quiz you take calculates your score, identifies specific syllabus weak spots (like Micronutrients or Food Chemistry), and creates tailored study planner entries."
+  }
+]

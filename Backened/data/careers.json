@@ -1,0 +1,99 @@
+{
+  "pathways": [
+    {
+      "id": "clinical-dietitian",
+      "title": "Clinical Dietitian",
+      "badge": "Healthcare",
+      "icon": "local_hospital",
+      "color": "primary",
+      "description": "Work in healthcare settings providing medical nutrition therapy, assessing patient needs, and developing targeted meal plans for disease management.",
+      "education": "Bachelor's or Master's in Dietetics / Clinical Nutrition, followed by accredited dietetic internship and national registration examination (RD).",
+      "skills": ["Medical Nutrition Therapy (MNT)", "Biochemical Lab Interpretation", "Enteral & Parenteral Nutrition", "Electronic Health Records (EHR)"],
+      "averageSalary": "$74,500 / year",
+      "growthRate": "+7% (Faster than average)",
+      "milestones": [
+        { "step": 1, "name": "B.Sc. Nutrition & Dietetics", "duration": "3-4 Years", "status": "Foundational" },
+        { "step": 2, "name": "Clinical Internship (1200+ hours)", "duration": "9-12 Months", "status": "Practical" },
+        { "step": 3, "name": "Registered Dietitian (RD) Licensure Exam", "duration": "3 Months", "status": "Licensing" },
+        { "step": 4, "name": "Board Certification Specialty (e.g. Renal, Oncology, Pediatric)", "duration": "Ongoing", "status": "Advanced" }
+      ]
+    },
+    {
+      "id": "sports-nutritionist",
+      "title": "Sports Nutritionist",
+      "badge": "Athletics",
+      "icon": "fitness_center",
+      "color": "tertiary",
+      "description": "Optimize athletic performance through tailored nutritional strategies. Advise athletes on hydration, fueling, and recovery protocols.",
+      "education": "Degree in Exercise Science, Kinesiology, or Nutrition, complemented by CSSD (Board Certified Specialist in Sports Dietetics) credential.",
+      "skills": ["Bioenergetics", "Hydration Testing", "Ergogenic Aids Analysis", "Body Composition Assessment (DEXA/BIA)"],
+      "averageSalary": "$81,200 / year",
+      "growthRate": "+11% (High Demand)",
+      "milestones": [
+        { "step": 1, "name": "Undergraduate Degree in Nutrition or Kinesiology", "duration": "4 Years", "status": "Foundational" },
+        { "step": 2, "name": "Work with Collegiate / Professional Athletic Programs", "duration": "2 Years", "status": "Practical" },
+        { "step": 3, "name": "CSSD Certification Examination", "duration": "6 Months", "status": "Licensing" },
+        { "step": 4, "name": "Director of Sports Performance Nutrition", "duration": "Leadership", "status": "Advanced" }
+      ]
+    },
+    {
+      "id": "public-health-nutritionist",
+      "title": "Public Health Nutritionist",
+      "badge": "Community",
+      "icon": "public",
+      "color": "secondary",
+      "description": "Focus on community well-being. Develop and implement nutritional programs, influence policy, and conduct research to improve population health metrics.",
+      "education": "Master of Public Health (MPH) with a concentration in Nutritional Sciences or Global Health.",
+      "skills": ["Epidemiology", "Program Evaluation", "Health Policy Advocacy", "Community Needs Assessment"],
+      "averageSalary": "$69,800 / year",
+      "growthRate": "+8%",
+      "milestones": [
+        { "step": 1, "name": "Degree in Nutrition / Health Sciences", "duration": "3-4 Years", "status": "Foundational" },
+        { "step": 2, "name": "MPH in Nutritional Sciences", "duration": "2 Years", "status": "Advanced Degree" },
+        { "step": 3, "name": "Field Work with WHO / UNICEF / National Health Missions", "duration": "1-2 Years", "status": "Practical" },
+        { "step": 4, "name": "Senior Policy Advisor / Program Director", "duration": "Leadership", "status": "Advanced" }
+      ]
+    },
+    {
+      "id": "food-industry-specialist",
+      "title": "Food Industry Specialist",
+      "badge": "Corporate",
+      "icon": "factory",
+      "color": "primary",
+      "description": "Consult on product development, ensure regulatory compliance, formulate functional foods, and guide marketing strategies for food and beverage corporations.",
+      "education": "Degree in Food Science & Technology or Food Chemistry, paired with regulatory compliance certifications (FSSAI, FDA, Codex).",
+      "skills": ["Sensory Evaluation", "Label Compliance & Claims", "Formulation & Shelf-life", "HACCP & Quality Assurance"],
+      "averageSalary": "$88,400 / year",
+      "growthRate": "+6%",
+      "milestones": [
+        { "step": 1, "name": "Degree in Food Science / Technology", "duration": "4 Years", "status": "Foundational" },
+        { "step": 2, "name": "R&D Lab / Quality Control Internship", "duration": "1 Year", "status": "Practical" },
+        { "step": 3, "name": "Regulatory Affairs Certification", "duration": "6 Months", "status": "Licensing" },
+        { "step": 4, "name": "Product Development Lead / R&D Manager", "duration": "Leadership", "status": "Advanced" }
+      ]
+    },
+    {
+      "id": "research-academic-nutritionist",
+      "title": "Research & Academia",
+      "badge": "Academic",
+      "icon": "school",
+      "color": "secondary",
+      "description": "Conduct cutting-edge clinical trials, author peer-reviewed publications, and educate the next generation of nutrition professionals at universities.",
+      "education": "M.Sc. and Ph.D. in Nutritional Sciences, Molecular Biology, or Dietetics, plus UGC NET / JRF qualification.",
+      "skills": ["Clinical Trial Design", "Statistical Analysis (SPSS/R)", "Grant Writing", "Scientific Publishing"],
+      "averageSalary": "$85,000 - $110,000 / year",
+      "growthRate": "+5%",
+      "milestones": [
+        { "step": 1, "name": "Postgraduate Degree (M.Sc. Nutrition)", "duration": "2 Years", "status": "Foundational" },
+        { "step": 2, "name": "Qualify UGC NET / JRF Examination", "duration": "1 Year", "status": "National Merit" },
+        { "step": 3, "name": "Doctoral Research (Ph.D.) & Thesis", "duration": "3-5 Years", "status": "Doctorate" },
+        { "step": 4, "name": "Assistant Professor / Principal Investigator", "duration": "Faculty", "status": "Leadership" }
+      ]
+    }
+  ],
+  "jobMarketStats": {
+    "openPositions": 1420,
+    "medianStartingSalary": "$58,000",
+    "topHiringRegions": ["Metro Healthcare Systems", "Sports Institutes", "Biotech Startups", "Federal Food Agencies"]
+  }
+}

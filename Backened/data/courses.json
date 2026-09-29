@@ -1,0 +1,92 @@
+[
+  {
+    "id": "course-1",
+    "title": "Macro-nutrients Masterclass",
+    "difficulty": "Intermediate",
+    "topic": "science",
+    "duration": "8h 30m",
+    "lessonsCount": 12,
+    "progress": 45,
+    "instructor": "Dr. Sarah Jenkins, RD, PhD",
+    "description": "Deep dive into carbohydrates, proteins, and fats. Understand their metabolic pathways and clinical significance in modern dietetics.",
+    "badgeColor": "primary",
+    "modules": [
+      { "id": "m1", "title": "Carbohydrate Metabolism & Glycemic Index", "duration": "1h 45m", "completed": true },
+      { "id": "m2", "title": "Protein Synthesis & Amino Acid Pools", "duration": "2h 10m", "completed": true },
+      { "id": "m3", "title": "Lipid Digestion, Transport & Apolipoproteins", "duration": "2h 30m", "completed": false },
+      { "id": "m4", "title": "Clinical Integration & Energy Partitioning", "duration": "2h 05m", "completed": false }
+    ]
+  },
+  {
+    "id": "course-2",
+    "title": "Clinical Dietetics 101",
+    "difficulty": "Beginner",
+    "topic": "clinical",
+    "duration": "12h 15m",
+    "lessonsCount": 18,
+    "progress": 0,
+    "instructor": "Dr. Robert Cole, MS, RD, LDN",
+    "description": "Fundamental principles of clinical nutrition assessment and intervention strategies for common acute and chronic conditions.",
+    "badgeColor": "secondary",
+    "modules": [
+      { "id": "m1", "title": "Nutrition Care Process (NCP) Fundamentals", "duration": "2h 00m", "completed": false },
+      { "id": "m2", "title": "Anthropometrics & Dietary Assessment Methods", "duration": "2h 30m", "completed": false },
+      { "id": "m3", "title": "Enteral and Parenteral Nutrition Basics", "duration": "3h 45m", "completed": false },
+      { "id": "m4", "title": "Case Documentation & PES Statements", "duration": "4h 00m", "completed": false }
+    ]
+  },
+  {
+    "id": "course-3",
+    "title": "Food Safety Standards & Regulatory Protocols",
+    "difficulty": "Advanced",
+    "topic": "science",
+    "duration": "6h 45m",
+    "lessonsCount": 8,
+    "progress": 15,
+    "instructor": "Prof. Elena Rostova, Certified Food Scientist",
+    "description": "Advanced protocols for institutional food safety, regulatory compliance, HACCP plans, and microbial risk management.",
+    "badgeColor": "primary",
+    "modules": [
+      { "id": "m1", "title": "Microbiology of Foodborne Pathogens", "duration": "1h 30m", "completed": true },
+      { "id": "m2", "title": "HACCP Principles & Critical Control Points", "duration": "2h 00m", "completed": false },
+      { "id": "m3", "title": "FSSAI & International Codex Regulations", "duration": "1h 45m", "completed": false },
+      { "id": "m4", "title": "Institutional Audit Protocols", "duration": "1h 30m", "completed": false }
+    ]
+  },
+  {
+    "id": "course-4",
+    "title": "Sports Nutrition & Athletic Fueling",
+    "difficulty": "Intermediate",
+    "topic": "sports",
+    "duration": "9h 20m",
+    "lessonsCount": 14,
+    "progress": 0,
+    "instructor": "Prof. Mark Davis, CSSD, CSCS",
+    "description": "Physiology of athletic performance, glycogen replenishment strategies, hydration metrics, and evidence-based ergogenic aids.",
+    "badgeColor": "tertiary",
+    "modules": [
+      { "id": "m1", "title": "Bioenergetics & Fuel Selection in Athletes", "duration": "2h 15m", "completed": false },
+      { "id": "m2", "title": "Pre, Intra, and Post-Competition Fueling", "duration": "2h 45m", "completed": false },
+      { "id": "m3", "title": "Fluid Balance & Electrolyte Strategies", "duration": "2h 00m", "completed": false },
+      { "id": "m4", "title": "Supplements & Anti-Doping Regulations", "duration": "2h 20m", "completed": false }
+    ]
+  },
+  {
+    "id": "course-5",
+    "title": "Pediatric & Maternal Nutrition",
+    "difficulty": "Intermediate",
+    "topic": "clinical",
+    "duration": "10h 10m",
+    "lessonsCount": 15,
+    "progress": 25,
+    "instructor": "Dr. Ananya Sharma, MD, Ped Nutrition",
+    "description": "Nutritional requirements during prenatal, lactation, neonatal, and early childhood stages with growth chart monitoring.",
+    "badgeColor": "primary",
+    "modules": [
+      { "id": "m1", "title": "Maternal Micronutrient Requirements", "duration": "2h 30m", "completed": true },
+      { "id": "m2", "title": "Infant Feeding & Weaning Guidelines", "duration": "2h 40m", "completed": false },
+      { "id": "m3", "title": "Failure to Thrive & Pediatric Deficiencies", "duration": "2h 30m", "completed": false },
+      { "id": "m4", "title": "Adolescent Nutrition & Eating Disorder Screenings", "duration": "2h 30m", "completed": false }
+    ]
+  }
+]

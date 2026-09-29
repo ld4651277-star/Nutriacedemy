@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriAcademy API Hub & Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#006c49',
+            'primary-container': '#10b981',
+            secondary: '#006a61',
+            tertiary: '#855300',
+            surface: '#f8f9ff',
+            'surface-container': '#e5eeff',
+            'surface-lowest': '#ffffff',
+            'on-surface': '#0b1c30',
+            'on-surface-variant': '#3c4a42'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background-color: #f8f9ff; }
+    pre { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+  </style>
+</head>
+<body class="text-on-surface antialiased min-h-screen flex flex-col">
+  <!-- Top Navigation Header -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-40 px-6 py-4 shadow-sm flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-xl shadow-sm">
+        N
+      </div>
+      <div>
+        <h1 class="text-xl font-bold text-primary leading-tight">NutriAcademy API Hub</h1>
+        <p class="text-xs text-gray-500">Node.js Express Backend & Interactive REST Explorer</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="/" class="text-sm font-semibold text-gray-700 hover:text-primary px-3 py-1.5 rounded-lg border border-gray-200 hover:border-primary transition-all flex items-center gap-1.5">
+        <span class="material-symbols-outlined text-base">web</span> View Frontend
+      </a>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full border border-emerald-200">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        API Online :5000
+      </span>
+    </div>
+  </header>
+
+  <!-- Quick Page Links Bar -->
+  <nav class="bg-white border-b border-gray-100 px-6 py-2.5 flex gap-2 overflow-x-auto text-xs font-medium text-gray-600">
+    <span class="text-gray-400 py-1">Frontend Pages:</span>
+    <a href="/" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Home</a>
+    <a href="/learn" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Learn / Courses</a>
+    <a href="/exams" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Exams & Quizzes</a>
+    <a href="/tools" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Calculators (BMI/BMR)</a>
+    <a href="/diet-planner" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Diet Planner</a>
+    <a href="/library" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Study Library</a>
+    <a href="/case-studies" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Case Studies</a>
+    <a href="/careers" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Careers</a>
+    <a href="/about" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">About & Contact</a>
+    <a href="/dashboard" class="hover:text-primary px-2.5 py-1 rounded bg-gray-50 hover:bg-emerald-50 transition-colors">Dashboard</a>
+  </nav>
+
+  <!-- Main API Documentation Content -->
+  <main class="flex-grow max-w-7xl w-full mx-auto p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+    
+    <!-- Left Column: Endpoint Cards -->
+    <div class="lg:col-span-7 space-y-6">
+      
+      <!-- Module: Nutrition Calculators -->
+      <section class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary">calculate</span>
+          <h2 class="text-lg font-bold text-gray-900">1. Nutrition Calculators API</h2>
+        </div>
+        <p class="text-xs text-gray-500 mb-4">Calculates BMI, Mifflin-St Jeor BMR, Total Daily Energy Expenditure (TDEE), and Macronutrient splits.</p>
+        
+        <div class="space-y-3">
+          <!-- BMI Card -->
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-emerald-100 text-emerald-800 mr-2">POST</span>
+              <code class="text-sm font-semibold text-gray-800">/api/tools/bmi</code>
+              <p class="text-xs text-gray-500 mt-1">Body Mass Index, category & healthy weight range</p>
+            </div>
+            <button onclick="testApi('/api/tools/bmi', 'POST', { height: 175, weight: 70 })" class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-lg hover:bg-emerald-700 transition-colors shadow-sm">
+              Try It
+            </button>
+          </div>
+
+          <!-- BMR Card -->
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-emerald-100 text-emerald-800 mr-2">POST</span>
+              <code class="text-sm font-semibold text-gray-800">/api/tools/bmr</code>
+              <p class="text-xs text-gray-500 mt-1">Mifflin-St Jeor & Harris-Benedict baseline resting calories</p>
+            </div>
+            <button onclick="testApi('/api/tools/bmr', 'POST', { age: 25, gender: 'male', height: 175, weight: 70 })" class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-lg hover:bg-emerald-700 transition-colors shadow-sm">
+              Try It
+            </button>
+          </div>
+
+          <!-- TDEE Card -->
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-emerald-100 text-emerald-800 mr-2">POST</span>
+              <code class="text-sm font-semibold text-gray-800">/api/tools/tdee</code>
+              <p class="text-xs text-gray-500 mt-1">Total Daily Energy Expenditure with activity multipliers</p>
+            </div>
+            <button onclick="testApi('/api/tools/tdee', 'POST', { bmr: 1650, activityLevel: 'moderate' })" class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-lg hover:bg-emerald-700 transition-colors shadow-sm">
+              Try It
+            </button>
+          </div>
+
+          <!-- Macros Card -->
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-emerald-100 text-emerald-800 mr-2">POST</span>
+              <code class="text-sm font-semibold text-gray-800">/api/tools/macros</code>
+              <p class="text-xs text-gray-500 mt-1">Macro ratios in grams & calories by dietary goal</p>
+            </div>
+            <button onclick="testApi('/api/tools/macros', 'POST', { targetCalories: 2100, goal: 'fat loss' })" class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-lg hover:bg-emerald-700 transition-colors shadow-sm">
+              Try It
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Module: Diet Planner -->
+      <section class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-secondary">restaurant_menu</span>
+          <h2 class="text-lg font-bold text-gray-900">2. Diet Planner API</h2>
+        </div>
+        <div class="space-y-3">
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-emerald-100 text-emerald-800 mr-2">POST</span>
+              <code class="text-sm font-semibold text-gray-800">/api/diet-planner/generate</code>
+              <p class="text-xs text-gray-500 mt-1">Generates customized full-day meal plan & macro allocation</p>
+            </div>
+            <button onclick="testApi('/api/diet-planner/generate', 'POST', { age: 24, sex: 'Female', height: 168, weight: 62, activity: 'Moderate' })" class="px-3 py-1.5 bg-secondary text-white text-xs font-semibold rounded-lg hover:bg-teal-700 transition-colors shadow-sm">
+              Generate Plan
+            </button>
+          </div>
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-blue-100 text-blue-800 mr-2">GET</span>
+              <code class="text-sm font-semibold text-gray-800">/api/diet-planner/saved</code>
+              <p class="text-xs text-gray-500 mt-1">Retrieve saved student diet plans</p>
+            </div>
+            <button onclick="testApi('/api/diet-planner/saved', 'GET')" class="px-3 py-1.5 bg-gray-700 text-white text-xs font-semibold rounded-lg hover:bg-gray-800 transition-colors shadow-sm">
+              Fetch Saved
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Module: Exams & Mock Tests -->
+      <section class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-tertiary">quiz</span>
+          <h2 class="text-lg font-bold text-gray-900">3. Exams & Quizzes API</h2>
+        </div>
+        <div class="space-y-3">
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-blue-100 text-blue-800 mr-2">GET</span>
+              <code class="text-sm font-semibold text-gray-800">/api/exams</code>
+              <p class="text-xs text-gray-500 mt-1">List mock tests (UGC NET, Food Safety Officer, etc.)</p>
+            </div>
+            <button onclick="testApi('/api/exams', 'GET')" class="px-3 py-1.5 bg-gray-700 text-white text-xs font-semibold rounded-lg hover:bg-gray-800 transition-colors shadow-sm">
+              List Exams
+            </button>
+          </div>
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-blue-100 text-blue-800 mr-2">GET</span>
+              <code class="text-sm font-semibold text-gray-800">/api/exams/exam-2</code>
+              <p class="text-xs text-gray-500 mt-1">Fetch 5-question quick revision quiz</p>
+            </div>
+            <button onclick="testApi('/api/exams/exam-2', 'GET')" class="px-3 py-1.5 bg-gray-700 text-white text-xs font-semibold rounded-lg hover:bg-gray-800 transition-colors shadow-sm">
+              Get Questions
+            </button>
+          </div>
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-blue-100 text-blue-800 mr-2">GET</span>
+              <code class="text-sm font-semibold text-gray-800">/api/exams/analytics/weak-topics</code>
+              <p class="text-xs text-gray-500 mt-1">Student weak spots (Micronutrients 42%, Food Chem 58%)</p>
+            </div>
+            <button onclick="testApi('/api/exams/analytics/weak-topics', 'GET')" class="px-3 py-1.5 bg-gray-700 text-white text-xs font-semibold rounded-lg hover:bg-gray-800 transition-colors shadow-sm">
+              Weak Topics
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Module: Courses & Dashboard -->
+      <section class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary">school</span>
+          <h2 class="text-lg font-bold text-gray-900">4. Courses, Library, Cases & Dashboard</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <button onclick="testApi('/api/courses', 'GET')" class="p-3 text-left bg-gray-50 hover:bg-emerald-50 rounded-xl border border-gray-200 transition-colors">
+            <span class="text-xs font-bold text-blue-700">GET /api/courses</span>
+            <p class="text-[11px] text-gray-500 mt-0.5">Course catalog & progress</p>
+          </button>
+          <button onclick="testApi('/api/library', 'GET')" class="p-3 text-left bg-gray-50 hover:bg-emerald-50 rounded-xl border border-gray-200 transition-colors">
+            <span class="text-xs font-bold text-blue-700">GET /api/library</span>
+            <p class="text-[11px] text-gray-500 mt-0.5">Study books & textbooks</p>
+          </button>
+          <button onclick="testApi('/api/cases/case-042', 'GET')" class="p-3 text-left bg-gray-50 hover:bg-emerald-50 rounded-xl border border-gray-200 transition-colors">
+            <span class="text-xs font-bold text-blue-700">GET /api/cases/case-042</span>
+            <p class="text-[11px] text-gray-500 mt-0.5">Clinical Case: T2DM & CKD</p>
+          </button>
+          <button onclick="testApi('/api/dashboard', 'GET')" class="p-3 text-left bg-gray-50 hover:bg-emerald-50 rounded-xl border border-gray-200 transition-colors">
+            <span class="text-xs font-bold text-blue-700">GET /api/dashboard</span>
+            <p class="text-[11px] text-gray-500 mt-0.5">Aggregated student metrics</p>
+          </button>
+        </div>
+      </section>
+
+      <!-- Module: Contact & Inquiries -->
+      <section class="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="material-symbols-outlined text-primary">mail</span>
+          <h2 class="text-lg font-bold text-gray-900">5. Contact & Support API</h2>
+        </div>
+        <div class="space-y-3">
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-emerald-100 text-emerald-800 mr-2">POST</span>
+              <code class="text-sm font-semibold text-gray-800">/api/contact</code>
+              <p class="text-xs text-gray-500 mt-1">Submit student inquiry or message</p>
+            </div>
+            <button onclick="testApi('/api/contact', 'POST', { name: 'Alex Student', email: 'alex@example.com', message: 'Inquiring about UGC NET mock exam schedule' })" class="px-3 py-1.5 bg-primary text-white text-xs font-semibold rounded-lg hover:bg-emerald-700 transition-colors shadow-sm">
+              Send Test Message
+            </button>
+          </div>
+          <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200/80 flex items-center justify-between">
+            <div>
+              <span class="inline-block px-2 py-0.5 text-[11px] font-bold rounded bg-blue-100 text-blue-800 mr-2">GET</span>
+              <code class="text-sm font-semibold text-gray-800">/api/contact/messages</code>
+              <p class="text-xs text-gray-500 mt-1">Read persisted messages</p>
+            </div>
+            <button onclick="testApi('/api/contact/messages', 'GET')" class="px-3 py-1.5 bg-gray-700 text-white text-xs font-semibold rounded-lg hover:bg-gray-800 transition-colors shadow-sm">
+              View Inbox
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Right Column: Live Interactive Response Console -->
+    <div class="lg:col-span-5">
+      <div class="bg-gray-900 text-gray-100 rounded-2xl shadow-xl p-6 sticky top-24 border border-gray-800 flex flex-col h-[650px]">
+        <div class="flex items-center justify-between border-b border-gray-800 pb-3 mb-4">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+            <span class="text-xs font-mono text-gray-400 ml-2">Console / Response</span>
+          </div>
+          <span id="responseStatus" class="text-xs font-mono px-2 py-0.5 rounded bg-gray-800 text-gray-300">Ready</span>
+        </div>
+        
+        <div class="text-xs font-mono text-emerald-400 mb-2 truncate" id="requestDisplay">
+          Click any "Try It" button to fire a live API request...
+        </div>
+
+        <pre id="responseJson" class="flex-grow overflow-auto text-xs font-mono text-gray-200 p-3 bg-black/40 rounded-xl border border-gray-800/80 custom-scrollbar">{
+  "status": "ready",
+  "message": "Click any button on the left to test live backend endpoints!"
+}</pre>
+
+        <div class="pt-4 border-t border-gray-800 flex items-center justify-between text-xs text-gray-500">
+          <span>Backend: Node.js Express</span>
+          <span id="latencyDisplay">0 ms</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    async function testApi(endpoint, method, body = null) {
+      const statusEl = document.getElementById('responseStatus');
+      const reqEl = document.getElementById('requestDisplay');
+      const jsonEl = document.getElementById('responseJson');
+      const latEl = document.getElementById('latencyDisplay');
+
+      statusEl.textContent = 'Sending...';
+      statusEl.className = 'text-xs font-mono px-2 py-0.5 rounded bg-yellow-900 text-yellow-300';
+      reqEl.textContent = `${method} ${endpoint}`;
+      jsonEl.textContent = 'Executing request to Node.js backend...';
+
+      const start = performance.now();
+      try {
+        const opts = {
+          method,
+          headers: { 'Content-Type': 'application/json' }
+        };
+        if (body && method !== 'GET') {
+          opts.body = JSON.stringify(body);
+        }
+
+        const res = await fetch(endpoint, opts);
+        const end = performance.now();
+        const latency = Math.round(end - start);
+        latEl.textContent = `${latency} ms`;
+
+        const data = await res.json();
+        statusEl.textContent = `HTTP ${res.status} ${res.statusText || 'OK'}`;
+        statusEl.className = res.ok
+          ? 'text-xs font-mono px-2 py-0.5 rounded bg-emerald-900 text-emerald-300'
+          : 'text-xs font-mono px-2 py-0.5 rounded bg-red-900 text-red-300';
+
+        jsonEl.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        statusEl.textContent = 'Error';
+        statusEl.className = 'text-xs font-mono px-2 py-0.5 rounded bg-red-900 text-red-300';
+        jsonEl.textContent = JSON.stringify({ error: err.message }, null, 2);
+      }
+    }
+  </script>
+</body>
+</html>

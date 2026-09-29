@@ -1,0 +1,18 @@
+[
+  {
+    "id": "msg-1790065323386",
+    "name": "Sophia Test",
+    "email": "sophia@example.com",
+    "message": "Can I get assistance choosing a clinical nutrition course?",
+    "createdAt": "2026-09-22T08:22:03.386Z",
+    "status": "pending"
+  },
+  {
+    "id": "msg-1",
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "message": "Hello! I would like to inquire about enrolling in the Clinical Dietetics 101 course and whether live Q&A sessions are recorded.",
+    "createdAt": "2024-03-12T14:22:00Z",
+    "status": "responded"
+  }
+]

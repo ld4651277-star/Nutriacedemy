@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Learn Nutrition Hub - NutriAcademy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#00422b",
+                    "primary-fixed": "#6ffbbe",
+                    "inverse-surface": "#213145",
+                    "tertiary-container": "#e29100",
+                    "surface": "#f8f9ff",
+                    "surface-container": "#e5eeff",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#dce9ff",
+                    "secondary-fixed": "#89f5e7",
+                    "surface-dim": "#cbdbf5",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#eff4ff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface-variant": "#d3e4fe",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#005049",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-tint": "#006c49",
+                    "primary-container": "#10b981",
+                    "background": "#f8f9ff",
+                    "on-secondary-container": "#006f66",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "outline": "#6c7a71",
+                    "surface-container-highest": "#d3e4fe",
+                    "inverse-primary": "#4edea3",
+                    "primary": "#006c49",
+                    "on-secondary-fixed": "#00201d",
+                    "secondary": "#006a61",
+                    "on-primary-fixed-variant": "#005236",
+                    "on-surface-variant": "#3c4a42",
+                    "secondary-fixed-dim": "#6bd8cb",
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#4edea3",
+                    "secondary-container": "#86f2e4",
+                    "on-primary-fixed": "#002113",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#bbcabf",
+                    "tertiary": "#855300",
+                    "on-tertiary-container": "#523200",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "inverse-on-surface": "#eaf1ff",
+                    "tertiary-fixed-dim": "#ffb95f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "2xl": "48px",
+                    "xs": "4px",
+                    "lg": "24px",
+                    "3xl": "64px",
+                    "margin-desktop": "48px",
+                    "xl": "32px",
+                    "margin-mobile": "16px",
+                    "md": "16px",
+                    "sm": "8px",
+                    "base": "4px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "display": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: theme('colors.background'); color: theme('colors.on-background'); }
+        .course-card { transition: all 0.3s ease; }
+        .course-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-white/80 backdrop-blur-md shadow-sm">
+<div class="flex items-center gap-md">
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary">NutriAcademy</span>
+</div>
+<nav class="hidden md:flex gap-lg">
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors scale-95 duration-150" href="#">Learn</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Exams</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Library</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Career</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Tools</a>
+</nav>
+<div class="flex items-center gap-md">
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-opacity-90 transition-all shadow-sm">Get Started</button>
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A clean, professional portrait of a student or young professional looking confident, suitable for an educational platform profile avatar. Modern minimalist aesthetic, soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Lt_UE0qICOoCqrlJme5zvHcvrxpq64bEEFsnRRFaHTsJlqqW7ONKfbSwDgJ1j0U_P7JMC6fr1q1C9AFcohlcmHvUJb-IrJDuIrxz4orYyExa79vEpdrGzrUdsdvsY6TitXa-NSxPGf8ioerkYFoxXOOgBQzuDbZsHNfjMjdMGs-YLjF5QZhWkU2wVUGGDRd8EFWihWMUfkK7bZDUEExGvJGq2v5hL7q-jXMkk2GC1esAJz39AM1h"/>
+</div>
+</header>
+<main class="flex-grow pt-3xl px-margin-mobile md:px-margin-desktop pb-3xl flex flex-col md:flex-row gap-xl mt-10">
+<!-- Sidebar Categories -->
+<aside class="w-full md:w-64 flex-shrink-0 mb-xl md:mb-0">
+<h2 class="text-headline-md font-headline-md text-primary mb-md font-bold">Categories</h2>
+<div class="flex flex-col gap-sm">
+<button class="text-left px-4 py-2 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md transition-colors shadow-sm">All Courses</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Basics</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Human Nutrition</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Clinical Nutrition</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Dietetics</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Food Science</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Safety</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Community Nutrition</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Biochemistry</button>
+<button class="text-left px-4 py-2 rounded-lg bg-surface text-on-surface hover:bg-surface-variant font-label-md text-label-md transition-colors">Therapeutic Nutrition</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-grow flex flex-col gap-lg">
+<!-- Header & Search/Filter -->
+<div class="flex flex-col gap-md">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary font-bold">LEARN NUTRITION Hub</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl">Explore our comprehensive library of nutrition courses designed for students and professionals.</p>
+<div class="flex flex-col md:flex-row gap-md mt-sm bg-surface p-md rounded-xl shadow-sm border border-outline-variant">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-3 top-1/2 transform -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-3 rounded-lg border-[#F1F5F9] focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md font-body-md bg-white" placeholder="Search courses..." type="text"/>
+</div>
+<div class="flex gap-sm">
+<select class="px-4 py-3 rounded-lg border border-[#F1F5F9] bg-white text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer">
+<option value="">Difficulty</option>
+<option value="beginner">Beginner</option>
+<option value="intermediate">Intermediate</option>
+<option value="advanced">Advanced</option>
+</select>
+<select class="px-4 py-3 rounded-lg border border-[#F1F5F9] bg-white text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer hidden sm:block">
+<option value="">Topic</option>
+<option value="clinical">Clinical</option>
+<option value="science">Science</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Course Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-lg">
+<!-- Course Card 1 -->
+<div class="course-card bg-white rounded-xl border border-[#E2E8F0] overflow-hidden flex flex-col h-full shadow-sm border-t-4 border-t-primary">
+<div class="p-lg flex-grow flex flex-col gap-md">
+<div class="flex justify-between items-start">
+<span class="px-3 py-1 bg-surface-container-low text-primary text-label-sm font-label-sm rounded-full">Intermediate</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface font-semibold leading-tight">Macro-nutrients Masterclass</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow line-clamp-2">Deep dive into carbohydrates, proteins, and fats. Understand their metabolic pathways and clinical significance in modern dietetics.</p>
+<div class="flex items-center gap-lg text-label-md font-label-md text-on-surface-variant mt-auto pt-sm border-t border-outline-variant/30">
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">schedule</span> 8h 30m</div>
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">menu_book</span> 12 Lessons</div>
+</div>
+<div class="mt-sm">
+<div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant mb-1">
+<span>Progress</span>
+<span>45%</span>
+</div>
+<div class="h-2 w-full bg-[#F1F5F9] rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 45%;"></div>
+</div>
+</div>
+</div>
+<div class="p-md bg-surface-container-lowest border-t border-[#E2E8F0]">
+<button class="w-full py-2 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md hover:shadow-md transition-shadow flex justify-center items-center gap-sm">
+                            Continue Learning
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Course Card 2 -->
+<div class="course-card bg-white rounded-xl border border-[#E2E8F0] overflow-hidden flex flex-col h-full shadow-sm border-t-4 border-t-secondary">
+<div class="p-lg flex-grow flex flex-col gap-md">
+<div class="flex justify-between items-start">
+<span class="px-3 py-1 bg-surface-container-low text-primary text-label-sm font-label-sm rounded-full">Beginner</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface font-semibold leading-tight">Clinical Dietetics 101</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow line-clamp-2">Fundamental principles of clinical nutrition assessment and intervention strategies for common acute conditions.</p>
+<div class="flex items-center gap-lg text-label-md font-label-md text-on-surface-variant mt-auto pt-sm border-t border-outline-variant/30">
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">schedule</span> 12h 15m</div>
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">menu_book</span> 18 Lessons</div>
+</div>
+<div class="mt-sm opacity-0"> <!-- Hidden progress to maintain height alignment if needed, or use structural CSS -->
+<div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant mb-1"><span>-</span><span>-</span></div>
+<div class="h-2 w-full bg-transparent rounded-full"></div>
+</div>
+</div>
+<div class="p-md bg-surface-container-lowest border-t border-[#E2E8F0]">
+<button class="w-full py-2 bg-tertiary-container text-on-tertiary-container rounded-lg font-label-md text-label-md hover:shadow-md transition-shadow flex justify-center items-center gap-sm">
+                            Start Learning
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Course Card 3 -->
+<div class="course-card bg-white rounded-xl border border-[#E2E8F0] overflow-hidden flex flex-col h-full shadow-sm border-t-4 border-t-primary">
+<div class="p-lg flex-grow flex flex-col gap-md">
+<div class="flex justify-between items-start">
+<span class="px-3 py-1 bg-error-container text-on-error-container text-label-sm font-label-sm rounded-full">Advanced</span>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="bookmark">bookmark</span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface font-semibold leading-tight">Food Safety Standards</h3>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow line-clamp-2">Advanced protocols for institutional food safety, regulatory compliance, and risk management in commercial kitchens.</p>
+<div class="flex items-center gap-lg text-label-md font-label-md text-on-surface-variant mt-auto pt-sm border-t border-outline-variant/30">
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">schedule</span> 6h 45m</div>
+<div class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">menu_book</span> 8 Lessons</div>
+</div>
+<div class="mt-sm">
+<div class="flex justify-between text-label-sm font-label-sm text-on-surface-variant mb-1">
+<span>Progress</span>
+<span>15%</span>
+</div>
+<div class="h-2 w-full bg-[#F1F5F9] rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 15%;"></div>
+</div>
+</div>
+</div>
+<div class="p-md bg-surface-container-lowest border-t border-[#E2E8F0]">
+<button class="w-full py-2 bg-primary-container text-on-primary-container rounded-lg font-label-md text-label-md hover:shadow-md transition-shadow flex justify-center items-center gap-sm">
+                            Continue Learning
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-lg">
+<button class="px-6 py-2 border border-outline text-on-surface rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-colors">Load More Courses</button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-surface dark:bg-inverse-surface shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-sm font-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 scale-90 duration-200 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="text-label-sm font-label-sm mt-1">Learn</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">calculate</span>
+<span class="text-label-sm font-label-sm mt-1">Tools</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-colors p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-sm font-label-sm mt-1">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full py-3xl px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-xl bg-surface-container-highest dark:bg-on-background mt-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-headline-md font-headline-md font-bold text-primary mb-md block">NutriAcademy</span>
+<p class="text-body-md font-body-md text-primary dark:text-primary-fixed mt-sm">© 2024 NutriAcademy. All rights reserved.</p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-wrap gap-lg justify-start md:justify-end">
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-all focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">About Us</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-all focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Contact</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-all focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-primary dark:hover:text-primary-fixed transition-all focus:outline-none focus:ring-2 focus:ring-primary rounded" href="#">Terms of Service</a>
+</div>
+</footer>
+
+    <!-- NutriAcademy Backend Integration Bridge -->
+    <script src="/frontend-assets/assets/js/nutri-bridge.js"></script>
+</body></html>

@@ -1,0 +1,62 @@
+{
+  "user": {
+    "id": "usr-01",
+    "fullName": "Future Nutritionist",
+    "role": "Student Nutritionist",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuANHRNEX5UXmG2xhL6fNrl-ZOjNLR_5UCaj2nK9wD1O2bkyKE54AbJbpe9YkQuVTigzlVzU0qZewxK-L901tG-EH6PEPyA2ahyAl4zwiCSS9YBjAGBq9Kd09oua3Cpl1-gn0Xk-b7g-3bmj269uLVAZlK0JnAGRl01LyV0PW1BtVZ_mbeID8EJemxMaVFZSD3FmvBsmoNnhe2wE-TpJCMOyA0xTsGNccpjYxGBMWm0greX5u-gEgjK0",
+    "email": "student@nutriacademy.edu",
+    "targetGoal": "Registered Dietitian (RD)",
+    "joinedDate": "January 2024"
+  },
+  "progressOverview": {
+    "activeCourse": "Clinical Nutrition Basics",
+    "completionPercentage": 68,
+    "completedLessons": 18,
+    "totalLessons": 26,
+    "studyHoursThisMonth": 34.5
+  },
+  "careerRoadmap": {
+    "targetTitle": "Registered Dietitian",
+    "steps": [
+      { "number": 1, "name": "Foundations", "time": "Completed Jan '24", "status": "completed" },
+      { "number": 2, "name": "Core Clinical", "time": "In Progress", "status": "in_progress" },
+      { "number": 3, "name": "Internship", "time": "Requires Core", "status": "locked" }
+    ]
+  },
+  "savedCourses": [
+    {
+      "id": "sc-1",
+      "title": "Advanced Dietetics",
+      "instructor": "Dr. Sarah Jenkins",
+      "modules": 12,
+      "icon": "local_dining",
+      "color": "primary"
+    },
+    {
+      "id": "sc-2",
+      "title": "Sports Nutrition",
+      "instructor": "Prof. Mark Davis",
+      "modules": 8,
+      "icon": "sports_gymnastics",
+      "color": "tertiary"
+    }
+  ],
+  "recentExams": [
+    {
+      "name": "Metabolism Basics Quiz",
+      "score": 92,
+      "status": "Passed",
+      "badge": "passed"
+    },
+    {
+      "name": "Vitamins & Minerals Midterm",
+      "score": 78,
+      "status": "Review",
+      "badge": "review"
+    }
+  ],
+  "notifications": [
+    { "id": "n1", "title": "Next Mock Test: UGC NET 4", "time": "Tomorrow, 10:00 AM", "isRead": false },
+    { "id": "n2", "title": "New Case Study Published: Celiac Disease in Adolescence", "time": "2 days ago", "isRead": true }
+  ]
+}
