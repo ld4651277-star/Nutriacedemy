@@ -173,15 +173,19 @@ docker build -t nutriacademy-platform .
 docker run -d -p 5000:5000 --name nutriacademy nutriacademy-platform
 ```
 
-### 3. Separate Deployment (Frontend on Vercel / Netlify + Backend on Cloud API)
-- **Frontend (Vercel / Netlify):**
+### 3. Separate Deployment (Frontend on Vercel + Backend on Render)
+> [!NOTE]
+> For the complete, beginner-friendly click-by-click instructions, read the **[Full Vercel & Render Deployment Guide](file:///DEPLOYMENT.md)**.
+
+- **Frontend (Vercel):**
   - Root directory: `frontend`
-  - Preconfigured with [frontend/vercel.json](file:///frontend/vercel.json) and [frontend/netlify.toml](file:///frontend/netlify.toml) for clean HTML5 URL routing.
-  - To connect to a remote backend, set `<meta name="nutri-api-url" content="https://your-api-domain.com">` or `window.NUTRI_API_BASE`.
-- **Backend (Render / Railway / AWS):**
+  - Preconfigured with [frontend/vercel.json](file:///frontend/vercel.json) for clean HTML5 URL routing.
+  - Set your live Render URL in [frontend/assets/js/config.js](file:///frontend/assets/js/config.js) or configure Vercel rewrites.
+- **Backend (Render):**
   - Root directory: `backend`
+  - Build command: `npm install`
   - Start command: `node server.js`
-  - Set `CORS_ORIGIN=https://your-frontend-domain.com`.
+  - Set `CORS_ORIGIN=*` and `NODE_ENV=production`.
 
 ---
 

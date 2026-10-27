@@ -6,9 +6,19 @@
 (function () {
   // Determine backend API base URL across various deployment setups
   const getApiBase = () => {
-    if (window.NUTRI_API_BASE) return window.NUTRI_API_BASE;
+    if (window.NUTRI_API_BASE && window.NUTRI_API_BASE.trim() !== '') {
+      return window.NUTRI_API_BASE.trim().replace(/\/+$/, '');
+    }
     const metaApi = document.querySelector('meta[name="nutri-api-url"]');
-    if (metaApi && metaApi.content) return metaApi.content;
+    if (metaApi && metaApi.content && !metaApi.content.includes('your-backend')) {
+      return metaApi.content.trim().replace(/\/+$/, '');
+    }
+    try {
+      const stored = localStorage.getItem('NUTRI_API_BASE');
+      if (stored && stored.trim() !== '') {
+        return stored.trim().replace(/\/+$/, '');
+      }
+    } catch (_) {}
     
     if (typeof window !== 'undefined' && window.location) {
       const origin = window.location.origin;
@@ -33,6 +43,7 @@
   };
 
   const API_BASE = getApiBase();
+  console.info(`[NutriAcademy] Connected to REST API Base: ${API_BASE}`);
 
   // Helper to map route to clean path or .html based on environment
   const isFileProtocol = typeof window !== 'undefined' && window.location.protocol === 'file:';
