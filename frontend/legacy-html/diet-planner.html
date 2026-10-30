@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NutriAcademy - Personalized Diet Planner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#00422b",
+                        "primary-fixed": "#6ffbbe",
+                        "inverse-surface": "#213145",
+                        "tertiary-container": "#e29100",
+                        "surface": "#f8f9ff",
+                        "surface-container": "#e5eeff",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#dce9ff",
+                        "secondary-fixed": "#89f5e7",
+                        "surface-dim": "#cbdbf5",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#eff4ff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#2a1700",
+                        "surface-variant": "#d3e4fe",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#005049",
+                        "tertiary-fixed": "#ffddb8",
+                        "surface-tint": "#006c49",
+                        "primary-container": "#10b981",
+                        "background": "#f8f9ff",
+                        "on-secondary-container": "#006f66",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#0b1c30",
+                        "outline": "#6c7a71",
+                        "surface-container-highest": "#d3e4fe",
+                        "inverse-primary": "#4edea3",
+                        "primary": "#006c49",
+                        "on-secondary-fixed": "#00201d",
+                        "secondary": "#006a61",
+                        "on-primary-fixed-variant": "#005236",
+                        "on-surface-variant": "#3c4a42",
+                        "secondary-fixed-dim": "#6bd8cb",
+                        "surface-bright": "#f8f9ff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#4edea3",
+                        "secondary-container": "#86f2e4",
+                        "on-primary-fixed": "#002113",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#bbcabf",
+                        "tertiary": "#855300",
+                        "on-tertiary-container": "#523200",
+                        "on-surface": "#0b1c30",
+                        "on-tertiary-fixed-variant": "#653e00",
+                        "inverse-on-surface": "#eaf1ff",
+                        "tertiary-fixed-dim": "#ffb95f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "2xl": "48px",
+                        "xs": "4px",
+                        "lg": "24px",
+                        "3xl": "64px",
+                        "margin-desktop": "48px",
+                        "xl": "32px",
+                        "margin-mobile": "16px",
+                        "md": "16px",
+                        "sm": "8px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-20 bg-white/80 backdrop-blur-md shadow-sm bg-surface-container-lowest dark:bg-inverse-surface transition-all duration-300">
+<div class="flex items-center gap-md">
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary tracking-tight">NutriAcademy</span>
+</div>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Learn</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Exams</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Library</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Career</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary text-label-md font-label-md hover:text-primary dark:hover:text-primary-fixed-dim transition-colors scale-95 duration-150 pb-1" href="#">Tools</a>
+</div>
+<div class="flex items-center gap-md">
+<div class="hidden md:flex items-center bg-surface-container-low rounded-full px-md py-sm">
+<span class="material-symbols-outlined text-on-surface-variant">search</span>
+<input class="bg-transparent border-none outline-none text-body-md font-body-md ml-sm text-on-surface-variant focus:ring-0 w-48" placeholder="Search..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary text-label-md font-label-md px-lg py-sm rounded-lg hover:bg-primary/90 transition-colors shadow-md">Get Started</button>
+<img alt="User profile" class="w-10 h-10 rounded-full object-cover border-2 border-surface-container-low cursor-pointer" data-alt="A small circular profile picture of a young woman with a friendly smile, professional lighting, clean white background, conveying health and wellness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdIEHEg8RBHRj7xEP2cs8kUTrORa3PohAyuF47vNy1uWVv9JpnUl6yqrkDQ1Q3mSgBlQBZQkwNbV4bBnwrB80pNxf3_tjre4wA9iDGltkyAOswu-Wiggk1rrSl6cuC4dApdYASN3i_3CuF8Kpz8hpIkwhfg_dQqxoJUwGLS45nBheePx4dp0Qlvp9E2Au8pCKZUf5XzEmmtmMb_uRvC6N_toalbq81U6b06J5MqyaVYw9WP3ip7kAU"/>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-3xl px-margin-mobile md:px-margin-desktop pb-3xl flex flex-col items-center">
+<div class="w-full max-w-5xl mt-xl mb-3xl text-center">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary mb-sm">Personalized Diet Planner</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant">Design a meal plan tailored perfectly to your unique body and goals.</p>
+</div>
+<div class="w-full max-w-4xl glass-panel rounded-xl shadow-lg p-lg md:p-2xl">
+<!-- Step Indicator -->
+<div class="flex items-center justify-center mb-2xl">
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center text-label-md font-label-md font-bold shadow-md">1</div>
+<div class="w-16 md:w-32 h-1 bg-surface-container-high mx-sm rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full"></div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center text-label-md font-label-md font-bold">2</div>
+</div>
+</div>
+<!-- Form Area (Currently showing Step 1 for visual structure, though static) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div class="space-y-lg">
+<h2 class="text-headline-md font-headline-md text-on-background border-b-2 border-primary w-fit pb-sm mb-lg">Your Profile</h2>
+<div class="grid grid-cols-2 gap-md">
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-xs">Age</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary px-md py-sm" placeholder="Years" type="number"/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-xs">Sex</label>
+<select class="w-full rounded-lg border-outline-variant bg-surface-container-lowest text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary px-md py-sm">
+<option>Select...</option>
+<option>Female</option>
+<option>Male</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-xs">Height (cm)</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary px-md py-sm" placeholder="170" type="number"/>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-xs">Weight (kg)</label>
+<input class="w-full rounded-lg border-outline-variant bg-surface-container-lowest text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary px-md py-sm" placeholder="65" type="number"/>
+</div>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-xs">Activity Level</label>
+<div class="space-y-sm">
+<label class="flex items-center gap-sm p-sm rounded-lg border border-outline-variant hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="text-primary focus:ring-primary" name="activity" type="radio"/>
+<span class="text-body-md font-body-md text-on-background">Sedentary (Office job, little exercise)</span>
+</label>
+<label class="flex items-center gap-sm p-sm rounded-lg border border-primary bg-primary-container/10 cursor-pointer transition-colors">
+<input checked="" class="text-primary focus:ring-primary" name="activity" type="radio"/>
+<span class="text-body-md font-body-md text-on-background font-medium">Moderate (Exercise 3-4 times/week)</span>
+</label>
+<label class="flex items-center gap-sm p-sm rounded-lg border border-outline-variant hover:bg-surface-container-low cursor-pointer transition-colors">
+<input class="text-primary focus:ring-primary" name="activity" type="radio"/>
+<span class="text-body-md font-body-md text-on-background">Active (Intense exercise daily)</span>
+</label>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div class="rounded-xl overflow-hidden h-64 md:h-full relative shadow-inner">
+<div class="bg-cover bg-center w-full h-full absolute inset-0" data-alt="A beautiful, high-resolution top-down flat lay photograph of fresh, vibrant salad ingredients on a clean white marble countertop. Focus on crisp greens, bright cherry tomatoes, and sliced avocados to convey freshness and health. Soft, natural lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeU1J7NB7t1qsQ_FpBK1kHyvVJv2mcTGjQ5iQfWze_6_d5mHuM8EciDwjCXaJys1-3UiUDCtRJZSVQk0XzQevUlFuAAE7cEnZjVoI0MopwhJVtqypvtTb5TIOfo4SBULLZlsDaZvyjXI9D3Kg6fGE1NXfGjilODia_XYlpYqmX0wmmBCa4-8xUpO4bcapaqbE2DYFqr_65ZMFhtpbWKV5Nj6L6KXnWVROMDtHwFVjzMOzfDzjOk6Uw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-lg">
+<p class="text-on-primary text-body-lg font-body-lg font-medium leading-tight">"Nutrition is not just about eating, it's about learning to live."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-xl flex justify-end">
+<button class="bg-tertiary-container text-on-tertiary-container text-label-md font-label-md px-2xl py-md rounded-lg hover:bg-tertiary-container/90 transition-colors shadow-md flex items-center gap-sm font-bold">
+                    Next Step <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="mt-2xl text-center w-full max-w-2xl px-md">
+<p class="text-label-sm font-label-sm text-on-surface-variant flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-sm">info</span>
+                Consult a qualified dietitian for medical conditions.
+            </p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-3xl px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-xl bg-surface-container-highest dark:bg-on-background mt-auto">
+<div>
+<span class="text-headline-md font-headline-md font-bold text-primary">NutriAcademy</span>
+<p class="mt-sm text-body-md font-body-md text-on-surface-variant">Empowering your nutritional journey with science-backed education.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-all text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-primary rounded px-1" href="#">About Us</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-all text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-primary rounded px-1" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-all text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-primary rounded px-1" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-all text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-primary rounded px-1" href="#">Terms of Service</a>
+</div>
+<div class="flex items-end md:justify-end text-label-sm font-label-sm text-on-surface-variant">
+            © 2024 NutriAcademy. All rights reserved.
+        </div>
+</footer>
+
+    <!-- NutriAcademy Backend Integration Bridge -->
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/nutri-bridge.js"></script>
+</body></html>

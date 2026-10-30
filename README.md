@@ -193,3 +193,5 @@ docker run -d -p 5000:5000 --name nutriacademy nutriacademy-platform
 - **Frontend:** HTML5, Modern CSS (TailwindCSS CDN + Vitality Design System Tokens), Vanilla JavaScript, Material Symbols, Google Inter Fonts.
 - **Backend:** Node.js, Express.js, CORS, Morgan logger, Dotenv.
 - **Database:** File-based JSON database engine with thread-safe persistence.
+#   N u t r i . a c e d e m y  
+ 

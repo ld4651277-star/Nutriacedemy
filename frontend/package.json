@@ -1,18 +1,24 @@
 {
   "name": "nutriacademy-frontend",
   "version": "1.0.0",
-  "description": "NutriAcademy Digital Education Platform - Client Frontend",
+  "private": true,
+  "type": "module",
+  "description": "NutriAcademy Digital Education Platform - React Frontend",
   "scripts": {
-    "dev": "npx serve . -p 3000",
-    "start": "npx serve . -p 3000",
-    "preview": "npx serve . -p 3000"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "keywords": [
-    "nutriacademy",
-    "nutrition",
-    "dietetics",
-    "frontend"
-  ],
-  "author": "NutriAcademy",
-  "license": "ISC"
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.4.11"
+  }
 }
